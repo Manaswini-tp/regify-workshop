@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Workshop Registration Form</h2>
+    <form id="regForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" 
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+       title="Enter a valid email address" required>
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" 
+       pattern="[0-9]{10}" 
+       title="Phone number must be exactly 10 digits" 
+       required>
+
+      <label for="dept">Department:</label>
+      <select id="dept" name="dept" required>
+        <option value="">Select</option>
+        <option>CSE</option>
+        <option>ISE</option>
+        <option>AI-ML</option>
+        <option>ECE</option>
+        <option>MECH</option>
+      </select>
+
+      <label for="year">Year of Study:</label>
+      <select id="year" name="year" required>
+        <option value="">Select</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+      </select>
+
+      <label for="topic">Workshop Topic:</label>
+      <select id="topic" name="topic" required>
+        <option value="">Select</option>
+        <option>Web Development</option>
+        <option>Agentic AI</option>
+        <option>Cyber Security</option>
+        <option>Cloud Computing</option>
+        <option>Machine Learning</option>
+      </select>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div id="response" class="response-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
